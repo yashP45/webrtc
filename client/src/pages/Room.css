@@ -1,0 +1,36 @@
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .video-container {
+    position: relative; 
+    display: flex;
+    /* /* justify-content: flex-end; */
+    align-items: flex-end; 
+    background-color: black;
+    height: 99vh;
+    width: 99vw;
+  }
+  
+  .myStream {
+    /* position: absolute;  */
+    height: 99vh;
+    width: 99vw;
+    background-color: aliceblue;
+  }
+  
+  .remoteStream {
+    position: absolute; 
+    margin-bottom: 20px;
+    margin-left: 20px;
+    height: 250px;
+    width: 450px;
+    background-color: black;
+    z-index: 1; 
+ border-radius: 20px;
+    box-shadow: 1px 2px 18px 4px rgba(128,0,128,0.6);
+  }
+  
