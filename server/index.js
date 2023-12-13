@@ -39,8 +39,11 @@
 
 // const server = http.createServer(app);
 const { Server } = require("socket.io");
+const dotenv = require('dotenv')
 
-const io = new Server(5000, {
+dotenv.config({ path: './config.env' });
+
+const io = new Server(PORT || 5000, {
   cors: true,
 });
 const users = [];
