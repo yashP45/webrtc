@@ -9,7 +9,7 @@ import Peer from "simple-peer";
 import io from "socket.io-client";
 import "./Room2.css";
 
-const socket = io.connect("http://localhost:8000");
+const socket = io.connect("https://myvideobackend2.onrender.com");
 const Room2 = () => {
   const [me, setMe] = useState("");
   const [stream, setStream] = useState();
