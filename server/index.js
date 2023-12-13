@@ -43,7 +43,7 @@ const dotenv = require('dotenv')
 
 dotenv.config({ path: './config.env' });
 
-const io = new Server(PORT || 5000, {
+const io = new Server(process.env.PORT || 5000, {
   cors: true,
 });
 const users = [];
