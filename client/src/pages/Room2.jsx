@@ -10,7 +10,7 @@ import io from "socket.io-client";
 import "./Room2.css";
 
 const socket = io.connect("http://localhost:5000");
-function Room2() {
+const Room2 = () => {
   const [me, setMe] = useState("");
   const [stream, setStream] = useState();
   const [receivingCall, setReceivingCall] = useState(false);
@@ -24,7 +24,7 @@ function Room2() {
   const myVideo = useRef();
   const userVideo = useRef();
   const connectionRef = useRef();
-  console.log(userId, me);
+
   useEffect(() => {
     navigator.mediaDevices
       .getUserMedia({ video: true, audio: true })
@@ -179,6 +179,6 @@ function Room2() {
       </div>
     </>
   );
-}
+};
 
 export default Room2;
