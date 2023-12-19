@@ -24,7 +24,7 @@ const Room2 = () => {
   const myVideo = useRef();
   const userVideo = useRef();
   const connectionRef = useRef();
-
+// console.log(stream.getTracks())
   useEffect(() => {
     navigator.mediaDevices
       .getUserMedia({ video: true, audio: true })
@@ -95,10 +95,15 @@ const Room2 = () => {
     setCallEnded(true);
     connectionRef.current.destroy();
   };
-
+const handleOffvideo =() => {
+  // myVideo.current.srcObject = null;
+  stream.getTracks().forEach((track) => {
+    track.stop();
+  });
+}
   return (
     <>
-      <h1 style={{ textAlign: "center", color: "#fff" }}>Zoomish</h1>
+  
       <div className="container">
         <div className="video-container">
           <div className="video">
@@ -108,9 +113,10 @@ const Room2 = () => {
                 muted
                 ref={myVideo}
                 autoPlay
-                style={{ width: "300px" }}
+                // style={{ width: "40vw" }}
               />
             )}
+            <button onClick={handleOffvideo}>Turn off video</button>
           </div>
           <div className="video">
             {callAccepted && !callEnded ? (
@@ -118,7 +124,7 @@ const Room2 = () => {
                 playsInline
                 ref={userVideo}
                 autoPlay
-                style={{ width: "300px" }}
+                // style={{ width: "40vw" }}
               />
             ) : null}
           </div>

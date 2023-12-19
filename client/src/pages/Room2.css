@@ -1,7 +1,7 @@
-.container {
+/* .container {
 	display: grid;
 	grid-template-columns: 7fr 3fr;
-}
+} */
 
 .myId {
 	margin-right: 5rem;
@@ -25,26 +25,38 @@
 	margin-top: 2rem;
 }
 
-.video-container {
+/* .video-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	justify-content: center;
 	align-content: center;
 	margin-top: 10rem;
 	margin-left: 10rem;
-}
+} */
 
 .caller {
 	text-align: center;
 	color: #fff;
 }
 
-body {
-	background: #4776e6; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #8e54e9, #4776e6); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(
-		to right,
-		#8e54e9,
-		#4776e6
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+
+
+.container {
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+	flex-direction: column;
+    height: 100vh;
+  }
+  
+  .video-container {
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	gap: 20px;
+  }
+   
+
+  
